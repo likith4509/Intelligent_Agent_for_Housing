@@ -73,27 +73,39 @@
             "    #apartment_block = {blocka, blockb}.\n" +
             "    #room_number = {101,102,103,201,202,203}.\n" +
             "    #tenant_name = {selena, shakira, maheshbabu, jagan}.\n" +
-            "    #apt_rooms = {1bhk, 2bhk, 3bhk}.\n" +
+            "    #apt_rooms = {onebhk, twobhk, threebhk}.\n" +
             "    #room_rates = {500, 800, 1200}.\n" +
+            "    #room_mates = {3, 5, 7}.\n" +
             "    #tenant_gender = {male,female}.\n" +
             "predicates\n" +
-            "    apartmentblock(#apartment_name, #apartment_block).\n" +
-            "    apartment_rent(#apt_rooms, #room_rates).\n" +
+            "    apartmentblock(#room_number, #apartment_block).\n" +
+            "    apartmentrent(#apt_rooms, #room_rates).\n" +
             "    tenantname(#apartment_name, #tenant_name).\n" +
             "    tenantgender(#apartment_name, #tenant_gender, #tenant_name).\n" +
+            "    tenantapt(#tenant_name, #apartment_name).\n" +
+            "    numberofroommates(#apt_rooms, #room_mates).\n" +
             "    gender(#tenant_name, #tenant_gender).\n" +
             "rules\n" +
-            "    apartmentblock(heritage, blocka).\n" +
-            "    apartmentblock(heritage, blockb).\n" +
-            "    apartmentblock(raiderpass, blocka).\n" +
-            "    apartmentblock(raiderpass, blockb).\n" +
-            "    apartment_rent(1bhk, 500).\n" +
+            "    apartmentblock(101, blocka).\n" +
+            "    apartmentblock(102, blocka).\n" +
+            "    apartmentblock(103, blocka).\n" +
+            "    apartmentblock(201, blockb).\n" +
+            "    apartmentblock(202, blockb).\n" +
+            "    apartmentblock(203, blockb).\n" +
+            "    apartmentrent(onebhk, 500).\n" +
+            "    apartmentrent(twobhk, 800).\n" +
+            "    apartmentrent(threebhk, 1200).\n" +
             "    tenantname(heritage,selena).\n" +
             "    tenantname(raiderpass,jagan).\n" +
             "    gender(selena, female).\n" +
             "    gender(maheshbabu, male).\n" +
             "    gender(jagan, male).\n" +
             "    gender(shakira, female).\n" +
+            "    tenantapt(selena,heritage).\n" +
+            "    tenantapt(jagan,raiderpass).\n" +
+            "    numberofroommates(onebhk,3).\n" +
+            "    numberofroommates(twobhk,5).\n" +
+            "    numberofroommates(threebhk,7).\n" +
             "    tenantgender(heritage, female, selena).\n" +
             "    tenantgender(raiderpass, male, maheshbabu).";
 
