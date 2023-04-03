@@ -44,30 +44,6 @@
     <script>
         var isClose=true;
         const stopwords = ["of", "the", "a", "an", "any", "is", "can", "who", "what", "why", "whom", "from", "belongs"];
-        // var editor = "sorts\n" +
-        //     "    #apartment_name = {heritage, raiderpass}.\n" +
-        //     "    #apartment_block = {blocka, blockb}.\n" +
-        //     "    #room_number = {101,102,103,201,202,203}.\n" +
-        //     "    #tenant_name = {selena, shakira, maheshbabu, jagan}.\n" +
-        //     "    #tenant_gender = {male,female}.\n" +
-        //     "predicates\n" +
-        //     "    apartmentblock(#apartment_name, #apartment_block).\n" +
-        //     "    tenantname(#apartment_name, #tenant_name).\n" +
-        //     "    tenantgender(#apartment_name, #tenant_gender, #tenant_name).\n" +
-        //     "    gender(#tenant_name, #tenant_gender).\n" +
-        //     "rules\n" +
-        //     "    apartmentblock(heritage, blocka).\n" +
-        //     "    apartmentblock(heritage, blockb).\n" +
-        //     "    apartmentblock(raiderpass, blocka).\n" +
-        //     "    apartmentblock(raiderpass, blockb).\n" +
-        //     "    tenantname(heritage,selena).\n" +
-        //     "    tenantname(raiderpass,jagan).\n" +
-        //     "    gender(selena, female).\n" +
-        //     "    gender(maheshbabu, male).\n" +
-        //     "    gender(jagan, male).\n" +
-        //     "    gender(shakira, female).\n" +
-        //     "    tenantgender(heritage, female, selena).\n" +
-        //     "    tenantgender(raiderpass, male, maheshbabu).";
         var editor = "sorts\n" +
             "    #apartment_name = {heritage, raiderpass}.\n" +
             "    #apartment_block = {blocka, blockb}.\n" +
